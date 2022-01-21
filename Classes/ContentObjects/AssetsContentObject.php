@@ -9,8 +9,10 @@ namespace Jar\Assets\ContentObjects;
  */
 
 use Jar\Utilities\Utilities\BackendUtility;
+use Jar\Utilities\Utilities\TypoScriptUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\PathUtility;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use TYPO3\CMS\Frontend\ContentObject\AbstractContentObject;
 
 /**
@@ -44,44 +46,10 @@ class AssetsContentObject extends AbstractContentObject
         if (!is_array($conf)) {
             return;
         }
-
-        $variables = $this->populate($conf);
+        $variables = TypoScriptUtility::populateTypoScriptConfiguration($conf, $this->cObj);
 
         $this->include($variables['path'], $variables['standalone']);
     }
-
-
-    protected function populate($variablesToProcess): array
-    {
-
-        $variables = [];
-
-        if (is_array($variablesToProcess)) {
-            foreach ($variablesToProcess as $variableName => $cObjType) {
-                if (is_array($cObjType)) {
-                    continue;
-                }
-
-                $result = $this->cObj->cObjGetSingle($cObjType, $variablesToProcess[$variableName . '.']);
-
-                if (empty($result)) {
-                    $result = $this->cObj->cObjGetSingle('TEXT', ['value' => $cObjType]);
-                }
-
-                // Lazy Value Loading
-                if (empty($result) && !isset($variablesToProcess[$variableName . '.'])) {
-                    $result = $cObjType;
-                }
-                $variables[$variableName] = $result;
-            }
-        }
-
-        return $variables;
-    }
-
-
-
-
 
     protected function include($path, $standalone): void
     {
