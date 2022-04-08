@@ -94,8 +94,9 @@ class AssetsContentObject extends AbstractContentObject
 
         $pageRenderer =  $this->getPageRenderer();
 
-        if (substr($pathFolder, -1) != DIRECTORY_SEPARATOR)
+        if (substr($pathFolder, -1) != DIRECTORY_SEPARATOR) {
             $pathFolder = $pathFolder . DIRECTORY_SEPARATOR;    // if directory path haven't '/' at last we add it
+        }
 
 
         if ($standalone) {
