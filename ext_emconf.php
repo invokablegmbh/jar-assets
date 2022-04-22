@@ -6,7 +6,7 @@ $EM_CONF['jar_assets'] = array(
 	'category' => 'plugin',
 	'author' => 'JAR Media GmbH',
 	'author_email' => 'info@jar.media',
-	'version' => '1.0.0',
+	'version' => '1.0.3',
 	'state' => 'stable',
 	'internal' => '',
 	'uploadfolder' => '0',
@@ -14,8 +14,9 @@ $EM_CONF['jar_assets'] = array(
 	'clearCacheOnLoad' => 0,
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '10.4',
+			'typo3' => '10.4.1-10.5.99',
 			'php' => '7.4.0-7.4.999',
+			'jar_utilities' => '1.0.0'
 		),
 		'conflicts' => array(
 		),
