@@ -24,7 +24,8 @@
 	    }
 	],
     "require": {
-        "jar/jar_utilities": "^v1.0"
+        "jar/jar_utilities": "^v1.0",
+        "typo3/cms-core": "^10.4 || ^11.5"
     },
     "autoload": {
         "psr-4": {
