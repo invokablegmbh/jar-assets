@@ -19,4 +19,4 @@ JAR Assets
 
 :Repository: https://github.com/invokablegmbh/jar-assets
 :Issues: https://github.com/invokablegmbh/jar-assets/issues
-:Documentation: https://docs.typo3.org/p/jar/jar_assets/1.0/en-us/
+:Documentation: https://docs.typo3.org/p/jar/jar_assets/main/en-us/
