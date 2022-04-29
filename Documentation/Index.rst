@@ -39,7 +39,7 @@ a GNU/GPL CMS/Framework available from `typo3.org <https://typo3.org/>`_ .
 
 This documentation is for the TYPO3 extension JAR Assets.
 If you find an error or something is missing, please:
-`Report a Problem <https://git.jar.media/composer-modules/typo3/jar-assets/-/issues/new>`__
+`Report a Problem <https://github.com/invokablegmbh/jar-assets/issues/new>`__
 
 ..   Note for editors:
 ..   temporarily removed from menu:
