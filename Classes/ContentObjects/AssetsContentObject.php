@@ -48,7 +48,9 @@ class AssetsContentObject extends AbstractContentObject
         }
         $variables = TypoScriptUtility::populateTypoScriptConfiguration($conf, $this->cObj);
 
-        $this->include($variables['path'], $variables['standalone']);
+        if(isset($variables['path'])) {
+            $this->include($variables['path'], $variables['standalone'] ?? false);
+        }
     }
 
     protected function include($path, $standalone): void
