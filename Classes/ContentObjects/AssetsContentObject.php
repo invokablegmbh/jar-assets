@@ -104,7 +104,7 @@ class AssetsContentObject extends AbstractContentObject
         if ($standalone) {
             $pageRenderer->disableConcatenateJavascript();
             $pageRenderer->disableConcatenateCss();
-        } else if (strpos(BackendUtility::getHostname(), '.e5j.de') === false) {
+        } else {
             $pageRenderer->enableConcatenateJavascript();    // concatinate js files
             $pageRenderer->enableConcatenateCss();    // concatinate css files
         }
