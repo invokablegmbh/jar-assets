@@ -14,8 +14,8 @@ $EM_CONF['jar_assets'] = array(
 	'clearCacheOnLoad' => 0,
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '10.4.1-11.5.99',
-			'jar_utilities' => '1.0.0'
+			'typo3' => '12.4.1-12.4.99',
+			'jar_utilities' => '^2.0'
 		),
 		'conflicts' => array(
 		),

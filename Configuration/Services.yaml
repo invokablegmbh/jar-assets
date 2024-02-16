@@ -1,0 +1,5 @@
+services:
+  Jar\Assets\ContentObjects\AssetsContentObject:
+    tags:
+      - name: frontend.contentobject
+        identifier: 'ASSETS'
