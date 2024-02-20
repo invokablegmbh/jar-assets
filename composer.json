@@ -24,7 +24,7 @@
 	    }
 	],
     "require": {
-        "jar/jar_utilities": "^v2.0",
+        "jar/jar_utilities": "^2.0",
         "typo3/cms-core": "^12.4"
     },
     "autoload": {
