@@ -21,6 +21,12 @@
 	        "email": "maurice.moellmer@invokable.gmbh",
 	        "homepage": "https://invokable.gmbh",
 	        "role": "Developer"
+	    },
+	    {
+	        "name": "Murat Ascieli",
+	        "email": "murat.ascieli@invokable.gmbh",
+	        "homepage": "https://invokable.gmbh",
+	        "role": "Developer"
 	    }
 	],
     "require": {

@@ -36,11 +36,6 @@ class AssetsContentObject extends AbstractContentObject
      */
 
 
-    public static function register(): void
-    {
-        $GLOBALS['TYPO3_CONF_VARS']['FE']['ContentObjects']['ASSETS'] = \Jar\Assets\ContentObjects\AssetsContentObject::class;
-    }
-
     public function render($conf = []): void
     {
         if (!is_array($conf)) {
