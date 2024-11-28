@@ -55,6 +55,8 @@ class AssetsContentObject extends AbstractContentObject
 
         $standalone = empty($standalone) ? false : !!$standalone;
 
+        $extPath = $path;
+
         $path = GeneralUtility::getFileAbsFileName($path);  // get absolute path of directory
         $pathFolder = PathUtility::getRelativePathTo($path);  // get relative path of directory
 
@@ -104,13 +106,12 @@ class AssetsContentObject extends AbstractContentObject
 
 
         foreach ($returnArray as $file) {
-
             if (strtolower(substr($file, -4)) == '.css') {    // for css files
-                $pageRenderer->addCssFile('/' . $pathFolder . $file, 'stylesheet', 'all', '', true, false, '', false, '|');        // render css files
+                $pageRenderer->addCssFile($extPath . DIRECTORY_SEPARATOR . $file, 'stylesheet', 'all', '', true, false, '', false, '|');        // render css files
             }
 
             if (strtolower(substr($file, -3)) == '.js') {    // for js files
-                $pageRenderer->addJsFooterFile('/' . $pathFolder . $file, 'text/javascript', true, false, '', false, '|', false, '');    // render js files
+                $pageRenderer->addJsFooterFile($extPath . DIRECTORY_SEPARATOR . $file, 'text/javascript', true, false, '', false, '|', false, '');    // render js files
             }
         }
     }
