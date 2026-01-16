@@ -30,8 +30,8 @@
 	    }
 	],
     "require": {
-        "jar/jar_utilities": "^2.0",
-        "typo3/cms-core": "^12.4"
+        "jar/jar_utilities": "*",
+        "typo3/cms-core": "^13.0"
     },
     "autoload": {
         "psr-4": {
